@@ -1,13 +1,13 @@
 package com.example.order_service.model;
 
-public class PurchaseOrder {
+public class PurchaseOrderModel {
     private Long id;
     private Long productId;
     private int quantity;
 
-    public PurchaseOrder() {}
+    public PurchaseOrderModel() {}
 
-    public PurchaseOrder(Long id, Long productId, int quantity) {
+    public PurchaseOrderModel(Long id, Long productId, int quantity) {
         this.id = id;
         this.productId = productId;
         this.quantity = quantity;
