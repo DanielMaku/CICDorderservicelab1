@@ -20,4 +20,11 @@ public class PurchaseOrderController {
     public PurchaseOrderModel create(@RequestBody PurchaseOrderModel order) {
         return service.create(order);
     }
+
+
+    @PutMapping("/test-catalog/{productId")
+    public String testCatalogConnection(@PathVariable Long productId)
+    {
+        return service.testCatalogConnection(productId);
+    }
 }
