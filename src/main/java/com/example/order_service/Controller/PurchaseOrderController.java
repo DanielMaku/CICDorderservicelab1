@@ -15,6 +15,7 @@ public class PurchaseOrderController {
     public List<PurchaseOrderModel> getAll() {
         return service.getAll();
     }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public PurchaseOrderModel create(@RequestBody PurchaseOrderModel order) {
@@ -22,7 +23,7 @@ public class PurchaseOrderController {
     }
 
 
-    @PutMapping("/test-catalog/{productId")
+    @GetMapping("/test-catalog/{productId}")
     public String testCatalogConnection(@PathVariable Long productId)
     {
         return service.testCatalogConnection(productId);
