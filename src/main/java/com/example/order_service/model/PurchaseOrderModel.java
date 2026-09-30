@@ -1,6 +1,14 @@
 package com.example.order_service.model;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "purchase_orders")
+
 public class PurchaseOrderModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long productId;
     private int quantity;
