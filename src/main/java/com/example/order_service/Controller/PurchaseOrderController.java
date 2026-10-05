@@ -1,4 +1,5 @@
 package com.example.order_service.Controller;
+import com.example.order_service.dto.ProductResponse;
 import com.example.order_service.model.PurchaseOrderModel;
 import com.example.order_service.service.PurchaseOrderService;
 import org.springframework.http.HttpStatus;
@@ -29,7 +30,7 @@ public class PurchaseOrderController {
     @GetMapping("/test-catalog/{productId}")
     public ProductResponse testCatalogConnection(
             @PathVariable Long productId) {
-                return purchaseOrderService.testCatalogConnection(productId);
+                return service.testCatalogConnection(productId);
     }
 
 }
